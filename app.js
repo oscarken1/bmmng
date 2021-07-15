@@ -3,11 +3,16 @@ const path = require('path');
 const mongoose = require('mongoose');
 const ejsMate = require('ejs-mate');
 const methodOverride = require('method-override');
+const multer = require('multer');
+const GridFsStorage = require('multer-gridfs-storage');
+const Grid = require('gridfs-stream');
+const crypto = require('crypto');
+const bodyParser = require('body-parser');
 const Movie = require('./models/movie');
 const Music = require('./models/music');
 const Book = require('./models/book');
 const Game = require('./models/game');
- 
+
 
 
 mongoose.connect('mongodb://localhost:27017/MMB', {
@@ -28,6 +33,7 @@ app.engine('ejs', ejsMate)
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'))
 
+app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
 
