@@ -1,0 +1,28 @@
+<% layout('./layout/boilerplate') %>
+<h1 class="text-center">Book details</h1>
+<div class="col-8 offset-2">
+<div class="card" mb-3>
+    <div class="row">
+        <div class="col-md-4">
+            <img class="img-fluid" src="" alt="">
+        </div>
+        <div class="col-mg-8">
+            <div class="card-body"> 
+                <h2>Title: <%= book.title %></h2>
+                <h2>Author(s): <%= book.author %></h2>
+                <h4>About Author: <%= book.about_author %></h4>
+                <h4>Summary: <%= book.summary %> </h4>
+                <h4>Genre: <%= book.genre %> </h4>
+                <small class="text-muted">Genre: <%= book.genre %> </small>
+                <form  action="/book/<%=book._id%>?_method=DELETE" method="POST">
+                    <button class="btn btn-danger">Delete</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+    <footer>
+        <p><a class="btn btn-success" href="/book">All books</a></p>
+        <p><a class="btn btn-success" href="/book/<%=book._id%>/edit ">Edit book</a></p>
+    </footer>

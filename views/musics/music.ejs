@@ -1,0 +1,32 @@
+<% layout('./layout/boilerplate') %>
+<h1 class="text-center">MUSICS</h1>
+
+    <ul>
+        <%  for (let music of musics) { %>
+            <div class="col-9 offset-1">
+                <div class="card" mb-3>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img class="img-fluid" src="" alt="">
+                        </div>
+                        <div class="col-mg-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Title: <%= music.title %>
+                                </h5>
+                                <h5 class="card-text">Artist: <%= music.artist %>
+                                </h5>
+                                <p class="card-text">Features: <%= music.features %>
+                                </p>
+                                <small class="text-muted">Genre: <%= music.genre %> </small>
+                                <p><a class="btn btn-primary" href="/music/<%= music._id %>">View <%= music.title %></a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        <% } %> 
+    </ul>
+        <div>
+            <p><a class="btn btn-success" href="/music/new">Add a new music</a></p>
+        </div>

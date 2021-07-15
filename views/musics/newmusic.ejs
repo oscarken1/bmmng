@@ -1,0 +1,46 @@
+<% layout('./layout/boilerplate') %>
+<div class="row">
+<h1 class="text-center">Add new Music</h1>
+    <div class="col-7 offset-3">
+    <form action="/music" method="POST">
+        <div>
+            <label class="form-label" for="artist">Artist</label>
+            <input class="form-control" type="text" id="artist" name="music[artist]">
+        </div>
+        <div>
+            <label class="form-label" for="title">Title</label>
+            <input class="form-control" type="text" id="title" name="music[title]">
+        </div>
+        <div>
+            <label class="form-label" for="features">features</label>
+            <input class="form-control" type="text" id="features" name="music[features]">
+        </div>
+        <div>
+            <label class="form-label" for="year">Music Year</label>
+            <input class="form-control" type="text" id="year" name="music[year]">
+        </div>
+        <div>
+            <label class="form-label" for="description">description</label>
+            <input class="form-control" type="text" id="description" name="music[description]">
+        </div>
+        <div>
+            <label class="form-label" for="country">Music Country</label>
+            <input class="form-control" type="text" id="country" name="music[country]">
+        </div>
+        <div>
+            <label class="form-label" for="genre">Genre</label>
+            <input class="form-control" type="text" id="genre" name="music[genre]">
+        </div>
+        <div>
+            <label class="form-label" for="release_date">Release Date</label>
+            <input class="form-control" type="text" id="release_date" name="music[release_date]">
+        </div>
+        <div>
+            <label class="form-label" for="download_url">Download URL</label>
+            <input class="form-control" type="text" id="download_url" name="music[download_url]">
+        </div>
+        <button class="btn btn-primary mb-3 mt-2" >Add Music</button>
+    </form>
+    </div>
+</div>
+    <p><a class="btn btn-success" href="/music">Back to All musics</a></p>

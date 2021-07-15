@@ -1,0 +1,79 @@
+<% layout('./layout/boilerplate') %>
+    <h1>HOME MUSIC MOVIES AND BOOKS</h1>
+</ul>
+<div class="container">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+        <div class="col card">
+            <h3 class="text-center">MUSICS</h1>
+            <% for (let music of musics) { %>
+                <div class="row">
+                    <div class="col-md-8">
+                        <img class="img-fluid" src="" alt="">
+                    </div>
+                    <div class="col-mg-2">
+                        <p class="card-title"><%= music.title %> By <%= music.artist %>
+                    </div>
+                    <div class="col-mg-2">
+                        <a class="btn btn-primary" href="/music/<%= music._id %>">View </a>
+                    </div> </p>
+                </div>
+                <% } %>
+    </div>
+        <div class="col card">
+            <h3 class="text-center">MOVIES</h1>
+            <% for (let movie of movies) { %>
+                <div class="row">
+                    <div class="col-md-8">
+                        <img class="img-fluid" src="" alt="">
+                    </div>
+                    <div class="col-mg-2">
+                        <p class="card-title">
+                            <%= movie.title %> By <%= movie.cast %>
+                    </div>
+                    <div class="col-mg-2">
+                        <a class="btn btn-primary" href="/movie/<%= movie._id %>">View </a>
+                    </div>
+                    </p>
+                </div>
+                <% } %>
+        </div>
+        <div class="col card">
+            <h3 class="text-center">BOOKS</h1>
+            <% for (let book of books) { %>
+            <div class="row">
+                <div class="col-md-8">
+                    <img class="img-fluid" src="" alt="">
+                </div>
+                <div class="col-mg-2">
+                    <p class="card-title">
+                        <%= book.title %> By <%= book.author %>
+                </div>
+                <div class="col-mg-2">
+                    <a class="btn btn-primary" href="/book/<%= book._id %>">View </a>
+                </div>
+                </p>
+            </div>
+            <% } %>
+        </div>
+        <div class="col card">
+            <h3 class="text-center">GAMES</h1>
+                <% for (let game of games) { %>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <img class="img-fluid" src="" alt="">
+                        </div>
+                        <div class="col-mg-2">
+                            <p class="card-title">
+                                <%= game.title %> By <%= game.cast %>
+                        </div>
+                        <div class="col-mg-2">
+                            <a class="btn btn-primary" href="/game/<%= game._id %>">View </a>
+                        </div>
+                        </p>
+                    </div>
+                    <% } %>
+        </div>
+        <div class="col">Column</div>
+    </div>
+</div>
+</div>

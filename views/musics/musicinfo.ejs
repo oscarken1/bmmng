@@ -1,0 +1,29 @@
+<% layout('./layout/boilerplate') %>
+<h1> Music Details</h1>
+<div class="col-8 offset-2">
+    <div class="card" mb-3>
+        <div class="row">
+            <div class="col-md-4">
+                <img class="img-fluid" src="" alt="">
+            </div>
+                <h2>Artist: <%= music.artist %></h2>
+                <h2>Title: <%= music.title %></h2>
+                <h2>Features: <%= music.features %></h2>
+                <h2>Music Year: <%= music.year %></h2>
+                <h2>Description: <%= music.description %></h2>
+                <h2>Country: <%= music.country %></h2>
+                <h2>Genre: <%= music.genre %></h2>
+                <h2>Release Date: <%= music.release_date %></h2>
+                <h2>Music language: <%= music.language %></h2>
+            <p>
+            <form action="/music/<%=music._id%>?_method=DELETE" method="POST">
+            <button class="btn btn-danger">Delete</button>
+            </form>
+            </p>
+        </div>
+    </div>
+</div>
+    <footer>
+        <p><a class="btn btn-success mt-3" href="/music">All Musics</a></p>
+        <p><a class="btn btn-success" href="/music/<%=music._id%>/edit ">Edit Music</a></p>
+    </footer>
